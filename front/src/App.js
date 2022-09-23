@@ -1,6 +1,9 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
 import { Grid } from "@mui/material";
+import Card from "./Card.js";
+import 'bootstrap/dist/css/bootstrap.css';
+import "./style.css";
+import imgFile from './1.jpg';
 
 function App() {
   var a = 1;
@@ -17,7 +20,18 @@ function App() {
           ></video>
         </Grid>
         <Grid item xs={3}>
-          <div>asd</div>
+        <Card
+        image={imgFile}
+        text="code"
+      />
+      <Card
+        image={imgFile}
+        text="code"
+      />
+      <Card
+        image={imgFile}
+        text="code"
+      />
         </Grid>
       </Grid>
     </>
