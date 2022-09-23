@@ -13,6 +13,7 @@ const textCopy = async (text) => {
 };
 
 function CardImage(props) {
+  console.log(props);
   const isImageURL = props.image;
   const [isClicked, setIsClicked] = useState(false);
 

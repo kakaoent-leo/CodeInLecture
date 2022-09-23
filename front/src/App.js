@@ -15,6 +15,7 @@ function onClickUpload() {
 
 function App() {
   const [codeImages, setCodeImages] = useState([]);
+  console.log(codeImages);
   const [videoSrc, setVideoSrc] = useState("");
   const [timeStamp, setTimeStamp] = useState(0);
 
@@ -56,13 +57,10 @@ function App() {
     <>
       <input type="file" id="fileInput" onInput={handleFileInput}></input>
 
-      {/* <div>a</div>
-      <div>a</div>
-      <div>a</div>
-      <div>a</div> */}
       <Grid className="gridsContainer" container spacing={2}>
         <Grid item xs={9}>
           <video
+            onPlay={handlePlay}
             className="video"
             id="video"
             name="video"
@@ -82,13 +80,11 @@ function App() {
           xs={3}
           style={{ overflow: "scroll", height: "100vh" }}
         >
-          <Card image={imgFile} text="code" />
-          <Card image={imgFile} text="code" />
-          <Card image={imgFile} text="code" />
-          <Card image={imgFile} text="code" />
-          <Card image={imgFile} text="code" />
-          <Card image={imgFile} text="code" />
-          <Card image={imgFile} text="code" />
+          {codeImages
+            .filter((item) => item.timeStamp < timeStamp)
+            .map((item) => (
+              <Card image={item.image} text={item.code} />
+            ))}
         </Grid>
       </Grid>
     </>
