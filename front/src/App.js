@@ -8,9 +8,13 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./style.css";
 import imgFile from "./1.jpg";
 
+function onClickUpload() {
+  let myInput = document.getElementById("fileInput");
+  myInput.click();
+}
+
 function App() {
   const [codeImages, setCodeImages] = useState([]);
-  console.log(codeImages);
   const [videoSrc, setVideoSrc] = useState("");
   const [timeStamp, setTimeStamp] = useState(0);
 
@@ -30,7 +34,6 @@ function App() {
         image: require(`./data/${imageName}`),
       });
     }
-    console.log(codeImagesArr);
     setCodeImages(
       codeImagesArr.map((item, idx) => {
         return {
@@ -51,27 +54,41 @@ function App() {
 
   return (
     <>
-      <Grid container spacing={2}>
+      <input type="file" id="fileInput" onInput={handleFileInput}></input>
+
+      {/* <div>a</div>
+      <div>a</div>
+      <div>a</div>
+      <div>a</div> */}
+      <Grid className="gridsContainer" container spacing={2}>
         <Grid item xs={9}>
           <video
-            onPlay={handlePlay}
+            className="video"
             id="video"
             name="video"
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: "100%" }}
             type="video/mp4"
             controls={true}
             autoPlay={true}
             src={videoSrc}
           ></video>
-          <input type="file" id="fileInput" onInput={handleFileInput}></input>
+          <button className="button-9" onClick={onClickUpload}>
+            File
+          </button>
         </Grid>
-        <Grid item xs={3}>
-          {codeImages
-            .filter((item) => item.timeStamp < timeStamp)
-            .map((item) => {
-              console.log(item);
-              return <Card image={item.image} text="code" />;
-            })}
+        <Grid
+          className="cardContainer"
+          item
+          xs={3}
+          style={{ overflow: "scroll", height: "100vh" }}
+        >
+          <Card image={imgFile} text="code" />
+          <Card image={imgFile} text="code" />
+          <Card image={imgFile} text="code" />
+          <Card image={imgFile} text="code" />
+          <Card image={imgFile} text="code" />
+          <Card image={imgFile} text="code" />
+          <Card image={imgFile} text="code" />
         </Grid>
       </Grid>
     </>
