@@ -4,6 +4,27 @@ import { Grid } from "@mui/material";
 
 function App() {
   var a = 1;
+  const json0 = {
+    id: 0,
+    isError: false,
+    timeStamp: 0,
+    codes: "if score >= 90",
+  };
+  const json1 = {
+    id: 1,
+    isError: false,
+    timeStamp: 5,
+    codes: 'if score >= 90:\nprint("A")',
+  };
+  const json2 = {
+    id: 2,
+    isError: false,
+    timeStamp: 10,
+    codes: 'if score >= 90:\nprint("A")\nprint("F")',
+  };
+  console.log(JSON.stringify(json0));
+  console.log(JSON.stringify(json1));
+  console.log(JSON.stringify(json2));
   return (
     <>
       <Grid container spacing={2}>
