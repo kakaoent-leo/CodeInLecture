@@ -1,1 +1,6 @@
-{"id":2,"isError":false,"timeStamp":10,"codes":"if score >= 90:\nprint(\"A\")\nprint(\"F\")"}
+{
+  "id": 2,
+  "isError": false,
+  "timeStamp": 10,
+  "codes": "if score >= 90:\nprint(\"A\")\nprint(\"F\")"
+}
