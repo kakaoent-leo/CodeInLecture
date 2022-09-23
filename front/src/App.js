@@ -6,6 +6,11 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./style.css";
 import imgFile from "./1.jpg";
 
+function onClickUpload(){
+  let myInput = document.getElementById("fileInput");
+  myInput.click();
+}
+
 function App() {
   const [codeImages, setCodeImages] = useState([]);
   const [videoSrc, setVideoSrc] = useState("");
@@ -49,23 +54,29 @@ function App() {
   return (
     <>
       <input type="file" id="fileInput" onInput={handleFileInput}></input>
+      
+      {/* <div>a</div>
       <div>a</div>
       <div>a</div>
-      <div>a</div>
-      <div>a</div>
-      <Grid container spacing={2}>
+      <div>a</div> */}
+      <Grid className="gridsContainer" container spacing={2}>
         <Grid item xs={9}>
-          <video
+          <video className="video"
             id="video"
             name="video"
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: "100%"}}
             type="video/mp4"
             controls={true}
             autoPlay={true}
             src={videoSrc}
           ></video>
+          <button className="button-9" onClick={onClickUpload}>File</button>
         </Grid>
-        <Grid item xs={3}>
+        <Grid className="cardContainer" item xs={3} style={{ overflow:"scroll", height:"100vh"}}>
+          <Card image={imgFile} text="code" />
+          <Card image={imgFile} text="code" />
+          <Card image={imgFile} text="code" />
+          <Card image={imgFile} text="code" />
           <Card image={imgFile} text="code" />
           <Card image={imgFile} text="code" />
           <Card image={imgFile} text="code" />
