@@ -1,6 +1,6 @@
-import Tooltip from '@mui/material/Tooltip';
+import Tooltip from "@mui/material/Tooltip";
 import React from "react";
-import { useState } from 'react';
+import { useState } from "react";
 // import ReactTooltip from "react-tooltip";
 import { ReactComponent as CopyButton } from "./copy-icon.svg";
 
@@ -14,14 +14,13 @@ const textCopy = async (text) => {
 
 function CardImage(props) {
   const isImageURL = props.image;
-  const [isClicked,setIsClicked] =useState(false)
-  console.log(props);
+  const [isClicked, setIsClicked] = useState(false);
 
   const handleOnClick = () => {
-    setIsClicked(true)
-    setTimeout(()=>{
-      setIsClicked(false)
-    },1000)
+    setIsClicked(true);
+    setTimeout(() => {
+      setIsClicked(false);
+    }, 1000);
     textCopy(props.text);
   };
   if (isImageURL) {
@@ -33,16 +32,13 @@ function CardImage(props) {
           alt="image undefined"
         />
         <div className="styleIcon">
-        
-          <Tooltip title={isClicked?'Copied!':'Copy'}>
+          <Tooltip title={isClicked ? "Copied!" : "Copy"}>
             <CopyButton
               data-tip
               data-for="registerTip"
               onClick={handleOnClick}
             />
           </Tooltip>
-          
-          
         </div>
       </div>
     );
