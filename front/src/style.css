@@ -1,0 +1,26 @@
+.styleCard {
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px #ccc;
+    color: #253b56;
+    margin: 12px 12px 12px 0px;
+}
+
+.styleCardContent {
+    padding: 4px 16px 20px 16px;
+}
+
+.styleImage {
+    background-color: lightGray;
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.styleIcon{
+    position: absolute;
+    width: 20px;
+    top: 2px;
+    right: 2px;
+    padding-right: 5px;
+    fill: #FFFFFF;
+}
