@@ -1,0 +1,4 @@
+{
+  "timeStamp": 0,
+  "code": "score = 75\r\n\r\nif score >= 90:\r\nprint(\"A\")\r\n\r\nelse if score >= 80:\r\nprint(\"B\")\r\n\r\nelse if score >= 70:\r\nprint(\"C\")\r\n\r\nelse:\r\nprint(\"F\")"
+}

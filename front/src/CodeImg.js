@@ -4,7 +4,6 @@
 // import React from 'react';
 // import imgFile from './1.jpg';
 
-
 // const Style = {
 //     color: "white",
 //     background: "teal",
@@ -30,6 +29,5 @@
 //           </Card>
 //       );
 // }
-
 
 // export default CodeImg;

@@ -1,0 +1,4 @@
+{
+  "timeStamp": 17,
+  "code": "class DataLoader:\r\ndef __init__(self, data_dir: str):\r\nself.data_dir = data_dir\r\nprint(\"Instance is created\")\r\ndef __call__(self):\r\nprint(\"Instance is called\")\r\ndata_loader = DataLoader('my_data_dir')\r\ndata_loader()\r\n"
+}

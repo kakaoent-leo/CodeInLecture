@@ -13,7 +13,6 @@ const textCopy = async (text) => {
 };
 
 function CardImage(props) {
-  console.log(props);
   const isImageURL = props.image;
   const [isClicked, setIsClicked] = useState(false);
 
@@ -28,7 +27,7 @@ function CardImage(props) {
     return (
       <div className="styleImage" style={{ position: "relative" }}>
         <img
-          style={{ width: props.width + "px", marginTop: "-8%" }}
+          style={{ width: props.width + "px" }}
           src={props.image}
           alt="image undefined"
         />
